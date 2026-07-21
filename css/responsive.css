@@ -1,0 +1,130 @@
+@media (max-width: 980px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 90px 0;
+  }
+
+  .container {
+    padding: 0 22px;
+  }
+
+  .nav-links,
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 12px 14px 12px 22px;
+  }
+
+  .nav-menu-mobile {
+    position: fixed;
+    top: 84px;
+    left: 50%;
+    width: min(360px, calc(100% - 32px));
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-12px) scale(0.97);
+    transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+    z-index: 99;
+  }
+
+  .nav-menu-mobile.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+
+  .nav-menu-mobile a {
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .nav-menu-mobile a.nav-cta-mobile {
+    margin-top: 8px;
+    background: var(--text-primary);
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-card,
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: clamp(36px, 11vw, 56px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-stack {
+    gap: 8px;
+  }
+
+  .stack-chip {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  .btn {
+    padding: 14px 24px;
+    font-size: 13.5px;
+  }
+
+  .about-card,
+  .contact-info,
+  .contact-form {
+    padding: 24px;
+  }
+}

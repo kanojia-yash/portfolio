@@ -1,0 +1,92 @@
+/* Floating gradient blobs */
+@keyframes float-blob-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(60px, 40px) scale(1.1); }
+  66% { transform: translate(-30px, 80px) scale(0.95); }
+}
+
+@keyframes float-blob-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(-70px, 50px) scale(1.15); }
+  70% { transform: translate(30px, -40px) scale(0.9); }
+}
+
+@keyframes float-blob-3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(50px, -60px) scale(1.12); }
+}
+
+/* Hero pulse dot */
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+/* Blinking type cursor */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Scroll wheel indicator */
+@keyframes scroll-wheel {
+  0% { opacity: 1; top: 7px; }
+  70% { opacity: 0; top: 20px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+/* Hero title line reveal */
+@keyframes line-up {
+  from { transform: translateY(110%); }
+  to { transform: translateY(0); }
+}
+
+.hero-title .line > * {
+  display: inline-block;
+  animation: line-up 1s var(--ease-out) both;
+}
+
+.hero-title .line:nth-child(1) > * { animation-delay: 0.1s; }
+.hero-title .line:nth-child(2) > * { animation-delay: 0.22s; }
+
+.hero-tag {
+  animation: fade-in 0.8s var(--ease-out) both;
+}
+
+.hero-role {
+  animation: fade-in 0.8s var(--ease-out) 0.5s both;
+}
+
+.hero-stack {
+  animation: fade-in 0.8s var(--ease-out) 0.65s both;
+}
+
+.hero .btn-row {
+  animation: fade-in 0.8s var(--ease-out) 0.8s both;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Staggered reveal delays */
+[data-reveal-stagger].in-view > *:nth-child(1) { transition-delay: 0.05s; }
+[data-reveal-stagger].in-view > *:nth-child(2) { transition-delay: 0.14s; }
+[data-reveal-stagger].in-view > *:nth-child(3) { transition-delay: 0.23s; }
+[data-reveal-stagger].in-view > *:nth-child(4) { transition-delay: 0.32s; }
+[data-reveal-stagger].in-view > *:nth-child(5) { transition-delay: 0.41s; }
+[data-reveal-stagger].in-view > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

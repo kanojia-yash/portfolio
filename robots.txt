@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kanojia-yash.github.io/portfolio/sitemap.xml
